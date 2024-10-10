@@ -8,6 +8,7 @@
 <div align="center">
   <img src="./image/DDM-ETS.png" alt="TabNet">
 </div>
+
 ### Architecture of TabNet
 <div align="center">
   <img src="./image/TabNet.png" alt="TabNet">
