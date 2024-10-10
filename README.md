@@ -6,5 +6,5 @@
 
 ### Comparison between existing AI data-driven approaches and DDM-ETS
 ![](./image/DDM-ETS.png)
-
-
+### Architecture of TabNet
+![](./image/TabNet.png)
