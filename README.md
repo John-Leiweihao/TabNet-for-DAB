@@ -9,4 +9,6 @@
   <img src="./image/DDM-ETS.png" alt="TabNet">
 </div>
 ### Architecture of TabNet
-![](./image/TabNet.png)
+<div align="center">
+  <img src="./image/TabNet.png" alt="TabNet">
+</div>
