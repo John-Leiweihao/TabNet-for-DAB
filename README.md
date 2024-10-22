@@ -9,12 +9,17 @@
 **DDM-ETS**, a novel data-driven modeling approach for enhancing accuracy and interpretability in power converter modeling, specifically tailored for **dual active bridge (DAB) converters**. It starts with **exploratory data analysis**, **TabNet** for surrogate model building, and followed by **Shapley Additive Explanations (SHAP)** for explainability analysis.
 
 ### I.Comparison between existing AI data-driven approaches and DDM-ETS
-current AI data-driven modeling approaches have notable room for enhancement due to data quality issues and the use of algorithms with poor accuracy and interpretability.To address existing limitations, a novel data-driven modeling with exploratory data analysis and TabNet **(DDM-ET)** is proposed for performance modeling. The first stage is to remove outliers and invalid values and explore the relationships between the features of the data through exploratory data analysis. In the  second stage, the processed data and TabNet are utilized to train  data-driven models for ZVS and efficiency. In the final stage, SHAP, a post-hoc model explanation method, combined with  mask, helps to further understand how each feature influences the model predictions.
+Current AI data-driven modeling approaches have notable room for enhancement due to data quality issues and the use of algorithms with poor accuracy and interpretability.To address existing limitations, a novel data-driven modeling with exploratory data analysis and TabNet **(DDM-ETS)** is proposed for performance modeling. The first stage is to remove outliers and invalid values and explore the relationships between the features of the data through exploratory data analysis. In the  second stage, the processed data and TabNet are utilized to train  data-driven models for ZVS and efficiency. In the final stage, SHAP, a post-hoc model explanation method, combined with  mask, helps to further understand how each feature influences the model predictions.
 <div align="center">
   <img src="./image/DDM-ETS.png" alt="MMD-ETS">
 </div>
 
 ### II.Architecture of TabNet
+TabNet is composed of feature transformer, attentive transformer and mask.The feature transformer is used to convert the input features (P, V2, Din) into an embedded space. The attentive transformer uses self-attentive mechanism to select the most important features and pass to mask. The mask implements sparse selection of features, allowing the model to dynamically focus on the most important features for the current decision. Additionally, by aggregating these masks, a comprehensive understanding of the global importance of features can be obtained. 
 <div align="center">
   <img src="./image/TabNet.png" alt="TabNet">
 </div>
+
+## Project description
+***
+The code for this project is open source, and we provide a filtered and de-privatised example dataset that users can use to run the code and learn about the model training process. The training results of the model depend heavily on the size, quality and features of the dataset. Please note that the example dataset is different from the full data we actually use, and thus may result in differences in the performance or results of training the model. We encourage users to train on their own data and make the necessary hyperparameter adjustments to get the best results.
