@@ -8,12 +8,13 @@
 ***
 **DDM-ETS**, a novel data-driven modeling approach for enhancing accuracy and interpretability in power converter modeling, specifically tailored for **dual active bridge (DAB) converters**. It starts with **exploratory data analysis**, **TabNet** for surrogate model building, and followed by **Shapley Additive Explanations (SHAP)** for explainability analysis.
 
-### Comparison between existing AI data-driven approaches and DDM-ETS
+### I.Comparison between existing AI data-driven approaches and DDM-ETS
+current AI data-driven modeling approaches have notable room for enhancement due to data quality issues and the use of algorithms with poor accuracy and interpretability.To address existing limitations, a novel data-driven modeling with exploratory data analysis and TabNet **(DDM-ET)** is proposed for performance modeling. The first stage is to remove outliers and invalid values and explore the relationships between the features of the data through exploratory data analysis. In the  second stage, the processed data and TabNet are utilized to train  data-driven models for ZVS and efficiency. In the final stage, SHAP, a post-hoc model explanation method, combined with  mask, helps to further understand how each feature influences the model predictions.
 <div align="center">
   <img src="./image/DDM-ETS.png" alt="MMD-ETS">
 </div>
 
-### Architecture of TabNet
+### II.Architecture of TabNet
 <div align="center">
   <img src="./image/TabNet.png" alt="TabNet">
 </div>
